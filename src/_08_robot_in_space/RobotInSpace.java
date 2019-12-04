@@ -14,7 +14,6 @@ import javax.swing.JApplet;
 import org.jointheleague.graphical.robot.Robot;
 
 public class RobotInSpace implements KeyEventDispatcher {
-
 	Robot rob = new Robot("mini");
 
 	/*
@@ -28,15 +27,25 @@ public class RobotInSpace implements KeyEventDispatcher {
 	private void moveRobot(int keyPressed) throws InterruptedException {
 		// 2. Print out the keyPressed variable and write down the numbers for
 		// each arrow key
-
+		//up
+		System.out.println(keyPressed);
 		// 3. If the up arrow is pressed, move the Robot up the screen.
-
+			if(keyPressed==38) {
+				rob.microMove(1);
+			}
+			
 		// 4. If the down arrow is pressed, move the Robot down.
-
+if(keyPressed==40) {
+			rob.microMove(-1);	
+			}
 		// 5. If the left arrow is pressed, make the Robot go left.
-
+if(keyPressed==37) {
+	rob.microMove(1);
+}
 		// 6. If right is pressed, move the Robot right.
-
+if(keyPressed==39) { 
+	rob.microMove(1);
+}
 		// 7. Run your program and move the Robot to RD-2D for a surprise!
 	}
 

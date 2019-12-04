@@ -6,9 +6,12 @@ void setup() {
     background(0, 0, 40); size(800, 800);
 
 }
-
+if(x <= 0){
+ x = x + 1; 
+}
 void draw() {
-
+y = y - 1;
+x = x - 1;
     fill(random(255), 0, 0);
     ellipse(x, y + 130, 90, 90);
     fill(248, 128, 0);
